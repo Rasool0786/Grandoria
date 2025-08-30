@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-27 20:00+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\pages\home.html:23
+msgid "Complimentary WiFi"
+msgstr "وای‌فای رایگان"
+
+#: .\templates\pages\home.html:27
+msgid "Valet Parking"
+msgstr "پارکینگ با پیش‌خدمت"
+
+#: .\templates\pages\home.html:31
+msgid "24/7 Room Service"
+msgstr "خدمات اتاق ۲۴ ساعته"
+
+#: .\templates\pages\home.html:35
+msgid "Book Now"
+msgstr "رزرو کنید"
+
+#: .\templates\pages\home.html:36 .\templates\pages\home.html:134
+msgid "View Rooms"
+msgstr "مشاهده اتاق‌ها"
+
+#: .\templates\pages\home.html:54
+msgid "Exceptional Experience"
+msgstr "تجربه‌ای بی‌نظیر"
+
+#: .\templates\pages\home.html:56
+msgid ""
+"Absolutely stunning hotel! The service was impeccable and the views "
+"breathtaking."
+msgstr "هتلی فوق‌العاده زیبا! خدمات بی‌نقص و مناظر خیره‌کننده."
+
+#: .\templates\pages\home.html:60
+msgid "Sarah Johnson"
+msgstr "سارا جانسون"
+
+#: .\templates\pages\home.html:74 .\templates\pages\home.html:119
+msgid "Luxury Rooms"
+msgstr "اتاق‌های لوکس"
+
+#: .\templates\pages\home.html:81
+msgid "Star Rating"
+msgstr "رتبه‌بندی ستاره‌ای"
+
+#: .\templates\pages\home.html:88
+msgid "Hour Service"
+msgstr "خدمات ساعتی"
+
+#: .\templates\pages\home.html:95 .\templates\pages\home.html:123
+msgid "Guest Satisfaction"
+msgstr "رضایت مهمان"
+
+#: .\templates\pages\home.html:110
+msgid "Welcome to Grandoria Resort"
+msgstr ""
+
+#: .\templates\pages\home.html:111
+msgid "Where luxury meets tranquility in the heart of nature's paradise."
+msgstr ""
+
+#: .\templates\pages\home.html:112
+msgid ""
+"Nestled among rolling hills and pristine landscapes, Grandview Resort has "
+"been offering exceptional hospitality for over three decades. Our commitment "
+"to excellence and attention to detail creates an unforgettable experience "
+"for discerning travelers seeking both comfort and adventure."
+msgstr ""
+
+#: .\templates\pages\home.html:113
+msgid ""
+"From our elegantly appointed suites to our world-class amenities, every "
+"aspect of your stay is designed to exceed expectations. Discover "
+"breathtaking views, exquisite dining, and personalized service that makes "
+"every moment special."
+msgstr ""
+
+#: .\templates\pages\home.html:127
+msgid "Years of Excellence"
+msgstr ""
+
+#: .\templates\pages\home.html:133
+msgid "Our Story"
+msgstr ""
+
+#: .\templates\pages\home.html:152
+msgid "Years"
+msgstr ""
+
+#: .\templates\pages\home.html:152
+#, fuzzy
+#| msgid "Exceptional Experience"
+msgid "Experience"
+msgstr "تجربه‌ای بی‌نظیر"
+
+#: .\templates\pages\home.html:167 .\templates\pages\home.html:168
+#, fuzzy
+#| msgid "View Rooms"
+msgid "Rooms"
+msgstr "مشاهده اتاق‌ها"
+
+#: .\templates\pages\home.html:169
+msgid ""
+"Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur "
+"velit"
+msgstr ""
+
+#: .\templates\pages\home.html:180
+msgid "Presidential"
+msgstr ""
+
+#: .\templates\pages\home.html:186
+msgid "Guests"
+msgstr ""
+
+#: .\templates\pages\home.html:194
+msgid "Top Floor"
+msgstr ""
+
+#: .\templates\pages\home.html:201
+msgid "Grand Presidential Suite"
+msgstr ""
