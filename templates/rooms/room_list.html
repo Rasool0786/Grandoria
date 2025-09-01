@@ -71,7 +71,11 @@
               <div class="col-xl-4 col-lg-6">
                 <div class="room-card">
                   <div class="room-image">
-                    <img src="{{ room.picture.url }}" alt="Deluxe Ocean Suite" class="img-fluid">
+                    {% if room.picture %}
+                      <img src="{{ room.picture.url }}" alt="Deluxe Ocean Suite" class="img-fluid">
+                    {% else %}
+                      <img src="{% static 'assets/img/hotel/room-1.webp' %}" alt="There's no image for this room" class="img-fluid">
+                    {% endif %}
                     <div class="room-features">
                       <span class="feature-badge ocean">Ocean View</span>
                       <span class="feature-badge popular">Popular</span>
@@ -81,11 +85,24 @@
                     <div class="room-header">
                       <h3>{{ room.title|title }}</h3>
                       <div class="room-rating">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                        <!-- change model from str to int-->
+                        {% with star_count=room.stars|add:0 %}
+                          <!-- number of all stars can exist-->
+                          {% with total_stars=5 %}
+                            {% with empty_stars=total_stars|add:0 %}
+                              <!-- add full stars-->
+                              {% for i in "x"|ljust:star_count %}
+                                <i class="bi bi-star-fill text-warning"></i>
+                              {% endfor %}
+                              <!-- add empty stars-->
+                              {% for i in "x"|ljust:empty_stars %}
+                                {% if forloop.counter > star_count %}
+                                  <i class="bi bi-star text-warning"></i>
+                                {% endif %}
+                              {% endfor %}
+                            {% endwith %}
+                          {% endwith %}
+                        {% endwith %}
                       </div>
                     </div>
                     <p class="room-description">{{ room.description|truncatewords:30 }}</p>

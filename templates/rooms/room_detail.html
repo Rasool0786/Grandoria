@@ -28,7 +28,11 @@
       <div class="row align-items-center mb-5">
         <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
           <div class="room-header-image">
-            <img src="{{ room.picture.url }}" alt="Deluxe Ocean View Suite" class="img-fluid rounded" />
+            {% if room.picture %}
+              <img src="{{ room.picture.url }}" alt="Deluxe Ocean Suite" class="img-fluid">
+            {% else %}
+              <img src="{% static 'assets/img/hotel/room-1.webp' %}" alt="There's no image for this room" class="img-fluid">
+            {% endif %}
             <div class="room-badge">
               <span class="text-white">Premium Suite</span>
             </div>
@@ -39,11 +43,24 @@
             <div class="room-rating mb-3">
               <span class="rating-score">4.8</span>
               <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
+                {% with star_count=room.stars|add:0 %}
+                  {% with total_stars=5 %}
+                    {% with empty_stars=total_stars|add:0 %}
+                      {% for i in "x"|ljust:star_count %}
+                        <i class="bi bi-star-fill text-warning"></i>
+                      {% endfor %}
+
+                      {% for i in "x"|ljust:empty_stars %}
+                        {% if forloop.counter > star_count %}
+                          <i class="bi bi-star text-warning"></i>
+                        {% endif %}
+                      {% endfor %}
+                    {% endwith %}
+                  {% endwith %}
+                {% endwith %}
+                {% for image in room.image.filter.active %}
+                  123
+                {% endfor %}
               </div>
               <span class="reviews-count">(127 reviews)</span>
             </div>
@@ -76,15 +93,20 @@
       <div class="room-gallery mb-5" data-aos="fade-up" data-aos-delay="200">
         <h3 class="section-subtitle mb-4">Room Gallery</h3>
         <div class="gallery-grid">
-          <div class="gallery-main">
-            <a href="{% static "assets/img/hotel/room-12.webp" %}" class="glightbox"><img src="{% static "assets/img/hotel/room-12.webp" %}" alt="Suite Interior" class="img-fluid" /></a>
-          </div>
-          <div class="gallery-thumbnails">
-            <a href="{% static "assets/img/hotel/room-8.webp" %}" class="glightbox"><img src="{% static "assets/img/hotel/room-8.webp" %}" alt="Bedroom View" class="img-fluid" /></a>
-            <a href="{% static "assets/img/hotel/room-6.webp" %}" class="glightbox"><img src="{% static "assets/img/hotel/room-6.webp" %}" alt="Living Area" class="img-fluid" /></a>
-            <a href="{% static "assets/img/hotel/room-18.webp" %}" class="glightbox"><img src="{% static "assets/img/hotel/room-18.webp" %}" alt="Ocean View" class="img-fluid" /></a>
-            <a href="{% static "assets/img/hotel/dining-4.webp" %}" class="glightbox"><img src="{% static "assets/img/hotel/dining-4.webp" %}" alt="Bathroom" class="img-fluid" /></a>
-          </div>
+          {% if room.images %}
+            <div class="gallery-main">
+              {% for image in room.image.all|slice:":1" %}
+              <a href="{{ image.images.url }}" class="glightbox"><img src="{{ image.images.url }}" alt="Suite Interior" class="img-fluid" /></a>
+              {% endfor %}
+            </div>
+            <div class="gallery-thumbnails">
+              {% for image in room.image.all|slice:"1:5" %}
+              <a href="{{ image.images.url }}" class="glightbox"><img src="{{ image.images.url }}" alt="Bedroom View" class="img-fluid" /></a>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p>There's no image in gallery</p>
+          {% endif %}
         </div>
       </div>
 

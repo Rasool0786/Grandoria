@@ -1,7 +1,10 @@
+# folders
 venv/
 .venv/
-media/
 __pycache__/
+media/rooms.models.upload_to_path/
+
+# venv
 venv/Lib/site-packages/django/contrib/admindocs/locale/af/LC_MESSAGES/django.mo
 venv/Lib/site-packages/django/contrib/admindocs/locale/af/LC_MESSAGES/django.mo
 venv/Lib/site-packages/django/contrib/admindocs/locale/ar_DZ/LC_MESSAGES/django.mo
